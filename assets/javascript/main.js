@@ -9,6 +9,7 @@ const modalRegister = $('.modal__register');
 const login = $('.login');
 const modalLogin = $('.modal__login');
 const modalBodys = $$('.modal__body');
+const rejects = $$('.btn__reject');
 
 // 1 scrollTop
 const headerHeight = header.offsetHeight;
@@ -40,6 +41,7 @@ modalRegister.onclick = function() {
     closeRegister();
 }
 
+
 // display login
 function showLogin() {
     modalLogin.classList.add('open');
@@ -52,6 +54,13 @@ login.onclick = function() {
 }
 modalLogin.onclick = function() {
     closeLogin();
+}
+
+for(const reject of rejects) {
+    reject.onclick = function() {
+        closeRegister();
+        closeLogin();
+    }
 }
 
 // 3 change to
