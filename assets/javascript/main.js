@@ -10,7 +10,7 @@ const login = $('.login');
 const modalLogin = $('.modal__login');
 const modalBodys = $$('.modal__body');
 
-// scrollTop
+// 1 scrollTop
 const headerHeight = header.offsetHeight;
 document.onscroll = function() {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -20,7 +20,7 @@ document.onscroll = function() {
     header.style.opacity = newHeight / headerHeight;
 };
 
-// stopPropagation
+// 2 stopPropagation
 for(const modalBody of modalBodys) {
     modalBody.onclick = function(e) {
         e.stopPropagation();
@@ -53,3 +53,19 @@ login.onclick = function() {
 modalLogin.onclick = function() {
     closeLogin();
 }
+
+// 3 change to
+const navbarLinks = $$('.navbar__link');
+const contentMains = $$('.content__main');
+const navbarLinkActive = $('.navbar__link.active');
+navbarLinks.forEach((navbarLink, index) => {
+    const contentMain = contentMains[index];
+
+    navbarLink.onclick = function() {
+        $('.navbar__link.active').classList.remove('active');
+        $('.content__main.active').classList.remove('active');
+
+        this.classList.add('active');
+        contentMain.classList.add('active');
+    };
+});

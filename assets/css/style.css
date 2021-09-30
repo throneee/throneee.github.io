@@ -158,6 +158,10 @@
     margin-right: 24px;
 }
 
+.navbar__link.active {
+    color: var(--main-color);
+}
+
 .navbar__link:hover {
     text-decoration: none;
     color: var(--main-color);
@@ -245,19 +249,117 @@
 
 /* content */
 .content {
-    
+    /* background-color: #d5ebff; */
+    background-image: url('/assets/img/dayee-Y8XnHG5vl7E-unsplash.jpg');
 }
 
 .content__main {
     margin-top: 150px;
-    height: 1000px;
+    display: none;
 }
 
-/* content slider*/
-/* .slider img{
+.content__main.active {
+    display: block;
+}
+
+/* content home */
+/* home slide */
+.home__slider img{
     width: 100%;
-    height: 500px;
-} */
+    height: calc(100vh - 150px);
+}
+
+/* home intro */
+.home__intro {
+    background-image: linear-gradient(0, #0d3a67, #042143);
+    padding: 0 20px;
+    color: white;
+}
+
+.home__intro-heading {
+    color: var(--main-color);
+    padding-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+.home__intro-sub {
+    padding: 20px 0 20px;
+    text-align: center;
+}
+
+.home__intro button {
+    margin: auto;
+}
+
+.home__intro-text {
+    padding: 40px 0 100px;
+    display: flex;
+    align-items: center;
+}
+
+.home__intro-left {
+    flex: 1;
+    font-size: 1.6rem;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.home__intro-left span:first-child {
+    display: block;
+}
+
+.home__intro-right {
+    flex: 1;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.home__intro-right h1 {
+    font-size: 6rem;
+    color: #8df5fe;
+}
+
+/* home mission */
+.home__mission {
+    padding: 60px 20px;
+    background-color: white;
+}
+
+.home__mission-meaning {
+    display: flex;
+}
+
+.home__mission-img {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home__mission-img img {
+    width: 350px;
+    height: 150px;
+    border-radius: 4px;
+}
+
+.home__mission-text {
+    flex: 1;
+    font-size: 1.6rem;
+}
+
+.home__mission-text h1 {
+    font-size: 6rem;
+    color: #8df5fe;
+    text-align: center;
+}
+
+.home__mission-text span{
+    display: block;
+    margin-top: 10px;
+}
 
 /* footer */
 .footer {
